@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Food Delivery App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">FoodDash</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <a href="#">Contact</a>
+      <input type="search" id="searchInput" placeholder="Search food...">
+      <button id="openCartBtn">🧾 Cart (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Category Filter -->
+    <div class="categories" id="categories"></div>
+
+    <!-- Products -->
+    <section class="grid" id="productGrid"></section>
+  </main>
+
+  <!-- Cart Panel -->
+  <div class="cart-panel" id="cartPanel">
+    <h3>Your Cart</h3>
+    <div id="cartItems"></div>
+    <hr>
+    <p>Total: ₹<span id="cartTotal">0</span></p>
+    <button class="btn-primary" id="checkoutBtn">Checkout</button>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="overlay" id="checkoutModal">
+    <div class="modal">
+      <h3>Checkout</h3>
+      <form id="checkoutForm">
+        <label>Name</label>
+        <input type="text" required>
+        <label>Address</label>
+        <textarea required></textarea>
+        <label>Payment Method</label>
+        <select required>
+          <option>Cash on Delivery</option>
+          <option>UPI</option>
+          <option>Card</option>
+        </select>
+        <button type="submit" class="btn-primary">Place Order</button>
+        <button type="button" id="closeCheckout">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 FoodDash. Built with HTML, CSS & JS.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
